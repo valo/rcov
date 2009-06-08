@@ -454,7 +454,7 @@ EOF
         end
         exit
     end
-    if formatters.all?{|formatter| formatter.sorted_file_pairs.empty? }
+    if !formatters.empty? and formatters.all?{|formatter| formatter.sorted_file_pairs.empty? }
         require 'pp'
         $stderr.puts <<-EOF
 
